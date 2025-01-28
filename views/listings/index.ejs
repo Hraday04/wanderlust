@@ -25,15 +25,6 @@
         display: none;
     }
 
-    .tax-toggle{
-        border: 1px solid black;
-        border-radius: 10px;
-        height: 3rem;
-        padding: 1rem;
-        margin-left: 5rem;
-        display: flex;
-        align-items: center;
-    }
 </style>
 
 
@@ -108,6 +99,7 @@
 
 
     </div>
+
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for(let listing of allListings) {%>
         <a href="/listings/<%= listing._id %>" class="listing-link">
@@ -118,7 +110,10 @@
           <p class="card-text">
            <b> <%= listing.title %> </b><br>
            &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
-           <i class="tax-info"> +18% GST</i>
+           <i class="tax-info"> 
+            <% const taxAmount = listing.price * 0.18; %>
+            <i class="tax-info"> + &#8377; <%= taxAmount.toLocaleString("en-IN") %> GST</i>
+           </i>
         </p>
         </div>
     </div>
