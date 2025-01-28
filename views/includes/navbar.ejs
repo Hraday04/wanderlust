@@ -12,6 +12,11 @@
     border-radius: 10px;
     right: 19%;
     position: absolute;
+    margin-top: 1%;
+  }
+
+  .navbar{
+    height: max-content;
   }
 
 </style>
@@ -23,11 +28,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav me-auto">
           <a class="nav-link" href="/listings">Explore</a>
         </div>
 
-        <div class="navbar-nav ms-auto">
+        <div class="navbar-nav">
           <div>
               <form action="/search" method="GET" class="d-flex" role="search">
                   <input class="form-control me-2" type="text" name="title" placeholder="Search Destinations" aria-label="search" required>

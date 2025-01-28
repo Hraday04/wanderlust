@@ -117,6 +117,16 @@ app.get('/search', async (req, res) => {
     }
 });
 
+// Other routes and middleware
+
+app.get('/privacy', (req, res) => {
+    res.render('includes/privacy');
+});
+
+app.get('/terms', (req, res) => {
+    res.render('includes/terms');
+});
+
 async function searchListingsByTitle(title) {
     // Replace this with your actual search logic
     // Example using Mongoose to query a MongoDB database
